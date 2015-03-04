@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Oct  9 14:37:34 2012
+
+drc -z topModule.ncd topModule.pcf
+
+DRC detected 0 errors and 0 warnings.

@@ -1,0 +1,2703 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/afs/inf.ed.ac.uk/group/teaching/cd/Xilinx132/ISE_DS/ISE/bin/lin64/unwrapped/trce
+-intstyle ise -v 5 -tsi bigadder.tsi -a -s 4 -u 20 -n 5 -xml bigadder.twx
+bigadder.ncd -o bigadder.twr bigadder.pcf
+
+Design file:              bigadder.ncd
+Physical constraint file: bigadder.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2011-06-20)
+Report level:             verbose report, limited to 5 items per endpoint, 5 endpoints per constraint
+                          unconstrained path report, limited to 20 items per endpoint, 5 endpoints per path report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2700 - Timing constraints ignored because advanced analysis with 
+   offsets was specified.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: Default OFFSET IN BEFORE analysis for clock "clock_BUFGP" 
+
+ 96 paths analyzed, 19 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   8.889ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sum_7 (K3.O1), 16 paths
+--------------------------------------------------------------------------------
+Offset:                 8.889ns (data path - clock path + uncertainty)
+  Source:               in1<0> (PAD)
+  Destination:          sum_7 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      11.289ns (Levels of Logic = 8)
+  Clock Path Delay:     2.400ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<0> to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    C2.I                 Tiopi                 1.300   in1<0>
+                                                       in1<0>
+                                                       in1_0_IBUF
+    SLICE_X1Y78.G2       net (fanout=3)        1.201   in1_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X1Y53.G1       net (fanout=2)        0.504   c7
+    SLICE_X1Y53.Y        Tilo                  0.704   sumwire<7>
+                                                       g_fulladder/Mxor_outadd_xo<0>1
+    K3.O1                net (fanout=1)        0.790   sumwire<7>
+    K3.OTCLK1            Tioock                0.684   out<7>
+                                                       sum_7
+    -------------------------------------------------  ---------------------------
+    Total                                     11.289ns (7.077ns logic, 4.212ns route)
+                                                       (62.7% logic, 37.3% route)
+
+  Minimum Clock Path: clock to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    K3.OTCLK1            net (fanout=17)       0.158   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.400ns (2.206ns logic, 0.194ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+Offset:                 8.728ns (data path - clock path + uncertainty)
+  Source:               in2<0> (PAD)
+  Destination:          sum_7 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      11.128ns (Levels of Logic = 8)
+  Clock Path Delay:     2.400ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<0> to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D3.I                 Tiopi                 1.300   in2<0>
+                                                       in2<0>
+                                                       in2_0_IBUF
+    SLICE_X1Y78.G4       net (fanout=3)        1.040   in2_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X1Y53.G1       net (fanout=2)        0.504   c7
+    SLICE_X1Y53.Y        Tilo                  0.704   sumwire<7>
+                                                       g_fulladder/Mxor_outadd_xo<0>1
+    K3.O1                net (fanout=1)        0.790   sumwire<7>
+    K3.OTCLK1            Tioock                0.684   out<7>
+                                                       sum_7
+    -------------------------------------------------  ---------------------------
+    Total                                     11.128ns (7.077ns logic, 4.051ns route)
+                                                       (63.6% logic, 36.4% route)
+
+  Minimum Clock Path: clock to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    K3.OTCLK1            net (fanout=17)       0.158   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.400ns (2.206ns logic, 0.194ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+Offset:                 8.245ns (data path - clock path + uncertainty)
+  Source:               in2<1> (PAD)
+  Destination:          sum_7 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      10.645ns (Levels of Logic = 8)
+  Clock Path Delay:     2.400ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<1> to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F5.I                 Tiopi                 1.300   in2<1>
+                                                       in2<1>
+                                                       in2_1_IBUF
+    SLICE_X1Y78.G1       net (fanout=2)        0.557   in2_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X1Y53.G1       net (fanout=2)        0.504   c7
+    SLICE_X1Y53.Y        Tilo                  0.704   sumwire<7>
+                                                       g_fulladder/Mxor_outadd_xo<0>1
+    K3.O1                net (fanout=1)        0.790   sumwire<7>
+    K3.OTCLK1            Tioock                0.684   out<7>
+                                                       sum_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.645ns (7.077ns logic, 3.568ns route)
+                                                       (66.5% logic, 33.5% route)
+
+  Minimum Clock Path: clock to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    K3.OTCLK1            net (fanout=17)       0.158   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.400ns (2.206ns logic, 0.194ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+Offset:                 8.095ns (data path - clock path + uncertainty)
+  Source:               in1<1> (PAD)
+  Destination:          sum_7 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      10.495ns (Levels of Logic = 8)
+  Clock Path Delay:     2.400ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<1> to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F2.I                 Tiopi                 1.300   in1<1>
+                                                       in1<1>
+                                                       in1_1_IBUF
+    SLICE_X1Y78.G3       net (fanout=2)        0.407   in1_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X1Y53.G1       net (fanout=2)        0.504   c7
+    SLICE_X1Y53.Y        Tilo                  0.704   sumwire<7>
+                                                       g_fulladder/Mxor_outadd_xo<0>1
+    K3.O1                net (fanout=1)        0.790   sumwire<7>
+    K3.OTCLK1            Tioock                0.684   out<7>
+                                                       sum_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.495ns (7.077ns logic, 3.418ns route)
+                                                       (67.4% logic, 32.6% route)
+
+  Minimum Clock Path: clock to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    K3.OTCLK1            net (fanout=17)       0.158   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.400ns (2.206ns logic, 0.194ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+Offset:                 7.077ns (data path - clock path + uncertainty)
+  Source:               in2<2> (PAD)
+  Destination:          sum_7 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.477ns (Levels of Logic = 7)
+  Clock Path Delay:     2.400ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<2> to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G1.I                 Tiopi                 1.300   in2<2>
+                                                       in2<2>
+                                                       in2_2_IBUF
+    SLICE_X0Y64.G3       net (fanout=2)        0.844   in2_2_IBUF
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X1Y53.G1       net (fanout=2)        0.504   c7
+    SLICE_X1Y53.Y        Tilo                  0.704   sumwire<7>
+                                                       g_fulladder/Mxor_outadd_xo<0>1
+    K3.O1                net (fanout=1)        0.790   sumwire<7>
+    K3.OTCLK1            Tioock                0.684   out<7>
+                                                       sum_7
+    -------------------------------------------------  ---------------------------
+    Total                                      9.477ns (6.373ns logic, 3.104ns route)
+                                                       (67.2% logic, 32.8% route)
+
+  Minimum Clock Path: clock to sum_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    K3.OTCLK1            net (fanout=17)       0.158   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.400ns (2.206ns logic, 0.194ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_6 (H6.O1), 14 paths
+--------------------------------------------------------------------------------
+Offset:                 8.063ns (data path - clock path + uncertainty)
+  Source:               in1<0> (PAD)
+  Destination:          sum_6 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      10.451ns (Levels of Logic = 7)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<0> to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    C2.I                 Tiopi                 1.300   in1<0>
+                                                       in1<0>
+                                                       in1_0_IBUF
+    SLICE_X1Y78.G2       net (fanout=3)        1.201   in1_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X1Y55.G1       net (fanout=2)        0.706   c6
+    SLICE_X1Y55.Y        Tilo                  0.704   sumwire<6>
+                                                       f_fulladder/Mxor_outadd_xo<0>1
+    H6.O1                net (fanout=1)        1.106   sumwire<6>
+    H6.OTCLK1            Tioock                0.684   out<6>
+                                                       sum_6
+    -------------------------------------------------  ---------------------------
+    Total                                     10.451ns (6.318ns logic, 4.133ns route)
+                                                       (60.5% logic, 39.5% route)
+
+  Minimum Clock Path: clock to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H6.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 7.902ns (data path - clock path + uncertainty)
+  Source:               in2<0> (PAD)
+  Destination:          sum_6 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      10.290ns (Levels of Logic = 7)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<0> to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D3.I                 Tiopi                 1.300   in2<0>
+                                                       in2<0>
+                                                       in2_0_IBUF
+    SLICE_X1Y78.G4       net (fanout=3)        1.040   in2_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X1Y55.G1       net (fanout=2)        0.706   c6
+    SLICE_X1Y55.Y        Tilo                  0.704   sumwire<6>
+                                                       f_fulladder/Mxor_outadd_xo<0>1
+    H6.O1                net (fanout=1)        1.106   sumwire<6>
+    H6.OTCLK1            Tioock                0.684   out<6>
+                                                       sum_6
+    -------------------------------------------------  ---------------------------
+    Total                                     10.290ns (6.318ns logic, 3.972ns route)
+                                                       (61.4% logic, 38.6% route)
+
+  Minimum Clock Path: clock to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H6.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 7.419ns (data path - clock path + uncertainty)
+  Source:               in2<1> (PAD)
+  Destination:          sum_6 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.807ns (Levels of Logic = 7)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<1> to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F5.I                 Tiopi                 1.300   in2<1>
+                                                       in2<1>
+                                                       in2_1_IBUF
+    SLICE_X1Y78.G1       net (fanout=2)        0.557   in2_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X1Y55.G1       net (fanout=2)        0.706   c6
+    SLICE_X1Y55.Y        Tilo                  0.704   sumwire<6>
+                                                       f_fulladder/Mxor_outadd_xo<0>1
+    H6.O1                net (fanout=1)        1.106   sumwire<6>
+    H6.OTCLK1            Tioock                0.684   out<6>
+                                                       sum_6
+    -------------------------------------------------  ---------------------------
+    Total                                      9.807ns (6.318ns logic, 3.489ns route)
+                                                       (64.4% logic, 35.6% route)
+
+  Minimum Clock Path: clock to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H6.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 7.269ns (data path - clock path + uncertainty)
+  Source:               in1<1> (PAD)
+  Destination:          sum_6 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.657ns (Levels of Logic = 7)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<1> to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F2.I                 Tiopi                 1.300   in1<1>
+                                                       in1<1>
+                                                       in1_1_IBUF
+    SLICE_X1Y78.G3       net (fanout=2)        0.407   in1_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X1Y55.G1       net (fanout=2)        0.706   c6
+    SLICE_X1Y55.Y        Tilo                  0.704   sumwire<6>
+                                                       f_fulladder/Mxor_outadd_xo<0>1
+    H6.O1                net (fanout=1)        1.106   sumwire<6>
+    H6.OTCLK1            Tioock                0.684   out<6>
+                                                       sum_6
+    -------------------------------------------------  ---------------------------
+    Total                                      9.657ns (6.318ns logic, 3.339ns route)
+                                                       (65.4% logic, 34.6% route)
+
+  Minimum Clock Path: clock to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H6.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.251ns (data path - clock path + uncertainty)
+  Source:               in2<2> (PAD)
+  Destination:          sum_6 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      8.639ns (Levels of Logic = 6)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<2> to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G1.I                 Tiopi                 1.300   in2<2>
+                                                       in2<2>
+                                                       in2_2_IBUF
+    SLICE_X0Y64.G3       net (fanout=2)        0.844   in2_2_IBUF
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X1Y55.G1       net (fanout=2)        0.706   c6
+    SLICE_X1Y55.Y        Tilo                  0.704   sumwire<6>
+                                                       f_fulladder/Mxor_outadd_xo<0>1
+    H6.O1                net (fanout=1)        1.106   sumwire<6>
+    H6.OTCLK1            Tioock                0.684   out<6>
+                                                       sum_6
+    -------------------------------------------------  ---------------------------
+    Total                                      8.639ns (5.614ns logic, 3.025ns route)
+                                                       (65.0% logic, 35.0% route)
+
+  Minimum Clock Path: clock to sum_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H6.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_5 (E1.O1), 12 paths
+--------------------------------------------------------------------------------
+Offset:                 7.197ns (data path - clock path + uncertainty)
+  Source:               in1<0> (PAD)
+  Destination:          sum_5 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.606ns (Levels of Logic = 6)
+  Clock Path Delay:     2.409ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<0> to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    C2.I                 Tiopi                 1.300   in1<0>
+                                                       in1<0>
+                                                       in1_0_IBUF
+    SLICE_X1Y78.G2       net (fanout=3)        1.201   in1_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X0Y61.G1       net (fanout=2)        0.143   c5
+    SLICE_X0Y61.Y        Tilo                  0.759   sumwire<5>
+                                                       e_fulladder/Mxor_outadd_xo<0>1
+    E1.O1                net (fanout=1)        1.515   sumwire<5>
+    E1.OTCLK1            Tioock                0.684   out<5>
+                                                       sum_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.606ns (5.669ns logic, 3.937ns route)
+                                                       (59.0% logic, 41.0% route)
+
+  Minimum Clock Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.167   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.409ns (2.206ns logic, 0.203ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Offset:                 7.036ns (data path - clock path + uncertainty)
+  Source:               in2<0> (PAD)
+  Destination:          sum_5 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.445ns (Levels of Logic = 6)
+  Clock Path Delay:     2.409ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<0> to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D3.I                 Tiopi                 1.300   in2<0>
+                                                       in2<0>
+                                                       in2_0_IBUF
+    SLICE_X1Y78.G4       net (fanout=3)        1.040   in2_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X0Y61.G1       net (fanout=2)        0.143   c5
+    SLICE_X0Y61.Y        Tilo                  0.759   sumwire<5>
+                                                       e_fulladder/Mxor_outadd_xo<0>1
+    E1.O1                net (fanout=1)        1.515   sumwire<5>
+    E1.OTCLK1            Tioock                0.684   out<5>
+                                                       sum_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.445ns (5.669ns logic, 3.776ns route)
+                                                       (60.0% logic, 40.0% route)
+
+  Minimum Clock Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.167   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.409ns (2.206ns logic, 0.203ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.553ns (data path - clock path + uncertainty)
+  Source:               in2<1> (PAD)
+  Destination:          sum_5 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      8.962ns (Levels of Logic = 6)
+  Clock Path Delay:     2.409ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<1> to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F5.I                 Tiopi                 1.300   in2<1>
+                                                       in2<1>
+                                                       in2_1_IBUF
+    SLICE_X1Y78.G1       net (fanout=2)        0.557   in2_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X0Y61.G1       net (fanout=2)        0.143   c5
+    SLICE_X0Y61.Y        Tilo                  0.759   sumwire<5>
+                                                       e_fulladder/Mxor_outadd_xo<0>1
+    E1.O1                net (fanout=1)        1.515   sumwire<5>
+    E1.OTCLK1            Tioock                0.684   out<5>
+                                                       sum_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.962ns (5.669ns logic, 3.293ns route)
+                                                       (63.3% logic, 36.7% route)
+
+  Minimum Clock Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.167   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.409ns (2.206ns logic, 0.203ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.403ns (data path - clock path + uncertainty)
+  Source:               in1<1> (PAD)
+  Destination:          sum_5 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      8.812ns (Levels of Logic = 6)
+  Clock Path Delay:     2.409ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<1> to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F2.I                 Tiopi                 1.300   in1<1>
+                                                       in1<1>
+                                                       in1_1_IBUF
+    SLICE_X1Y78.G3       net (fanout=2)        0.407   in1_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X0Y61.G1       net (fanout=2)        0.143   c5
+    SLICE_X0Y61.Y        Tilo                  0.759   sumwire<5>
+                                                       e_fulladder/Mxor_outadd_xo<0>1
+    E1.O1                net (fanout=1)        1.515   sumwire<5>
+    E1.OTCLK1            Tioock                0.684   out<5>
+                                                       sum_5
+    -------------------------------------------------  ---------------------------
+    Total                                      8.812ns (5.669ns logic, 3.143ns route)
+                                                       (64.3% logic, 35.7% route)
+
+  Minimum Clock Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.167   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.409ns (2.206ns logic, 0.203ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+Offset:                 5.385ns (data path - clock path + uncertainty)
+  Source:               in2<2> (PAD)
+  Destination:          sum_5 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      7.794ns (Levels of Logic = 5)
+  Clock Path Delay:     2.409ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<2> to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G1.I                 Tiopi                 1.300   in2<2>
+                                                       in2<2>
+                                                       in2_2_IBUF
+    SLICE_X0Y64.G3       net (fanout=2)        0.844   in2_2_IBUF
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X0Y61.G1       net (fanout=2)        0.143   c5
+    SLICE_X0Y61.Y        Tilo                  0.759   sumwire<5>
+                                                       e_fulladder/Mxor_outadd_xo<0>1
+    E1.O1                net (fanout=1)        1.515   sumwire<5>
+    E1.OTCLK1            Tioock                0.684   out<5>
+                                                       sum_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.794ns (4.965ns logic, 2.829ns route)
+                                                       (63.7% logic, 36.3% route)
+
+  Minimum Clock Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.167   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.409ns (2.206ns logic, 0.203ns route)
+                                                       (91.6% logic, 8.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point carry (SLICE_X0Y54.F4), 14 paths
+--------------------------------------------------------------------------------
+Offset:                 7.154ns (data path - clock path + uncertainty)
+  Source:               in1<0> (PAD)
+  Destination:          carry (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.547ns (Levels of Logic = 8)
+  Clock Path Delay:     2.393ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<0> to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    C2.I                 Tiopi                 1.300   in1<0>
+                                                       in1<0>
+                                                       in1_0_IBUF
+    SLICE_X1Y78.G2       net (fanout=3)        1.201   in1_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X0Y54.F4       net (fanout=2)        0.048   c7
+    SLICE_X0Y54.CLK      Tfck                  0.892   carry
+                                                       g_fulladder/outcarry1
+                                                       carry
+    -------------------------------------------------  ---------------------------
+    Total                                      9.547ns (6.581ns logic, 2.966ns route)
+                                                       (68.9% logic, 31.1% route)
+
+  Minimum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.151   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.393ns (2.206ns logic, 0.187ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.993ns (data path - clock path + uncertainty)
+  Source:               in2<0> (PAD)
+  Destination:          carry (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      9.386ns (Levels of Logic = 8)
+  Clock Path Delay:     2.393ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<0> to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D3.I                 Tiopi                 1.300   in2<0>
+                                                       in2<0>
+                                                       in2_0_IBUF
+    SLICE_X1Y78.G4       net (fanout=3)        1.040   in2_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X0Y54.F4       net (fanout=2)        0.048   c7
+    SLICE_X0Y54.CLK      Tfck                  0.892   carry
+                                                       g_fulladder/outcarry1
+                                                       carry
+    -------------------------------------------------  ---------------------------
+    Total                                      9.386ns (6.581ns logic, 2.805ns route)
+                                                       (70.1% logic, 29.9% route)
+
+  Minimum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.151   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.393ns (2.206ns logic, 0.187ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.510ns (data path - clock path + uncertainty)
+  Source:               in2<1> (PAD)
+  Destination:          carry (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      8.903ns (Levels of Logic = 8)
+  Clock Path Delay:     2.393ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<1> to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F5.I                 Tiopi                 1.300   in2<1>
+                                                       in2<1>
+                                                       in2_1_IBUF
+    SLICE_X1Y78.G1       net (fanout=2)        0.557   in2_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X0Y54.F4       net (fanout=2)        0.048   c7
+    SLICE_X0Y54.CLK      Tfck                  0.892   carry
+                                                       g_fulladder/outcarry1
+                                                       carry
+    -------------------------------------------------  ---------------------------
+    Total                                      8.903ns (6.581ns logic, 2.322ns route)
+                                                       (73.9% logic, 26.1% route)
+
+  Minimum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.151   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.393ns (2.206ns logic, 0.187ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 6.360ns (data path - clock path + uncertainty)
+  Source:               in1<1> (PAD)
+  Destination:          carry (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      8.753ns (Levels of Logic = 8)
+  Clock Path Delay:     2.393ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<1> to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F2.I                 Tiopi                 1.300   in1<1>
+                                                       in1<1>
+                                                       in1_1_IBUF
+    SLICE_X1Y78.G3       net (fanout=2)        0.407   in1_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X0Y54.F4       net (fanout=2)        0.048   c7
+    SLICE_X0Y54.CLK      Tfck                  0.892   carry
+                                                       g_fulladder/outcarry1
+                                                       carry
+    -------------------------------------------------  ---------------------------
+    Total                                      8.753ns (6.581ns logic, 2.172ns route)
+                                                       (75.2% logic, 24.8% route)
+
+  Minimum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.151   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.393ns (2.206ns logic, 0.187ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 5.342ns (data path - clock path + uncertainty)
+  Source:               in2<2> (PAD)
+  Destination:          carry (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      7.735ns (Levels of Logic = 7)
+  Clock Path Delay:     2.393ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<2> to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G1.I                 Tiopi                 1.300   in2<2>
+                                                       in2<2>
+                                                       in2_2_IBUF
+    SLICE_X0Y64.G3       net (fanout=2)        0.844   in2_2_IBUF
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X1Y61.G4       net (fanout=2)        0.285   c4
+    SLICE_X1Y61.Y        Tilo                  0.704   c6
+                                                       d_fulladder/outcarry1
+    SLICE_X1Y61.F4       net (fanout=2)        0.042   c5
+    SLICE_X1Y61.X        Tilo                  0.704   c6
+                                                       e_fulladder/outcarry1
+    SLICE_X0Y54.G4       net (fanout=2)        0.597   c6
+    SLICE_X0Y54.Y        Tilo                  0.759   carry
+                                                       f_fulladder/outcarry1
+    SLICE_X0Y54.F4       net (fanout=2)        0.048   c7
+    SLICE_X0Y54.CLK      Tfck                  0.892   carry
+                                                       g_fulladder/outcarry1
+                                                       carry
+    -------------------------------------------------  ---------------------------
+    Total                                      7.735ns (5.877ns logic, 1.858ns route)
+                                                       (76.0% logic, 24.0% route)
+
+  Minimum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.151   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.393ns (2.206ns logic, 0.187ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_4 (H3.O1), 10 paths
+--------------------------------------------------------------------------------
+Offset:                 5.245ns (data path - clock path + uncertainty)
+  Source:               in1<0> (PAD)
+  Destination:          sum_4 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      7.633ns (Levels of Logic = 5)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<0> to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    C2.I                 Tiopi                 1.300   in1<0>
+                                                       in1<0>
+                                                       in1_0_IBUF
+    SLICE_X1Y78.G2       net (fanout=3)        1.201   in1_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X0Y60.G1       net (fanout=2)        0.383   c4
+    SLICE_X0Y60.Y        Tilo                  0.759   sumwire<4>
+                                                       d_fulladder/Mxor_outadd_xo<0>1
+    H3.O1                net (fanout=1)        0.291   sumwire<4>
+    H3.OTCLK1            Tioock                0.684   out<4>
+                                                       sum_4
+    -------------------------------------------------  ---------------------------
+    Total                                      7.633ns (4.965ns logic, 2.668ns route)
+                                                       (65.0% logic, 35.0% route)
+
+  Minimum Clock Path: clock to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H3.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 5.084ns (data path - clock path + uncertainty)
+  Source:               in2<0> (PAD)
+  Destination:          sum_4 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      7.472ns (Levels of Logic = 5)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<0> to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D3.I                 Tiopi                 1.300   in2<0>
+                                                       in2<0>
+                                                       in2_0_IBUF
+    SLICE_X1Y78.G4       net (fanout=3)        1.040   in2_0_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X0Y60.G1       net (fanout=2)        0.383   c4
+    SLICE_X0Y60.Y        Tilo                  0.759   sumwire<4>
+                                                       d_fulladder/Mxor_outadd_xo<0>1
+    H3.O1                net (fanout=1)        0.291   sumwire<4>
+    H3.OTCLK1            Tioock                0.684   out<4>
+                                                       sum_4
+    -------------------------------------------------  ---------------------------
+    Total                                      7.472ns (4.965ns logic, 2.507ns route)
+                                                       (66.4% logic, 33.6% route)
+
+  Minimum Clock Path: clock to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H3.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 4.601ns (data path - clock path + uncertainty)
+  Source:               in2<1> (PAD)
+  Destination:          sum_4 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      6.989ns (Levels of Logic = 5)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<1> to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F5.I                 Tiopi                 1.300   in2<1>
+                                                       in2<1>
+                                                       in2_1_IBUF
+    SLICE_X1Y78.G1       net (fanout=2)        0.557   in2_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X0Y60.G1       net (fanout=2)        0.383   c4
+    SLICE_X0Y60.Y        Tilo                  0.759   sumwire<4>
+                                                       d_fulladder/Mxor_outadd_xo<0>1
+    H3.O1                net (fanout=1)        0.291   sumwire<4>
+    H3.OTCLK1            Tioock                0.684   out<4>
+                                                       sum_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.989ns (4.965ns logic, 2.024ns route)
+                                                       (71.0% logic, 29.0% route)
+
+  Minimum Clock Path: clock to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H3.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 4.451ns (data path - clock path + uncertainty)
+  Source:               in1<1> (PAD)
+  Destination:          sum_4 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      6.839ns (Levels of Logic = 5)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in1<1> to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F2.I                 Tiopi                 1.300   in1<1>
+                                                       in1<1>
+                                                       in1_1_IBUF
+    SLICE_X1Y78.G3       net (fanout=2)        0.407   in1_1_IBUF
+    SLICE_X1Y78.Y        Tilo                  0.704   sumwire<2>
+                                                       a_fulladder/outcarry1
+    SLICE_X0Y64.G2       net (fanout=2)        0.751   c2
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X0Y60.G1       net (fanout=2)        0.383   c4
+    SLICE_X0Y60.Y        Tilo                  0.759   sumwire<4>
+                                                       d_fulladder/Mxor_outadd_xo<0>1
+    H3.O1                net (fanout=1)        0.291   sumwire<4>
+    H3.OTCLK1            Tioock                0.684   out<4>
+                                                       sum_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.839ns (4.965ns logic, 1.874ns route)
+                                                       (72.6% logic, 27.4% route)
+
+  Minimum Clock Path: clock to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H3.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 3.433ns (data path - clock path + uncertainty)
+  Source:               in2<2> (PAD)
+  Destination:          sum_4 (FF)
+  Destination Clock:    clock_BUFGP rising
+  Data Path Delay:      5.821ns (Levels of Logic = 4)
+  Clock Path Delay:     2.388ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: in2<2> to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    G1.I                 Tiopi                 1.300   in2<2>
+                                                       in2<2>
+                                                       in2_2_IBUF
+    SLICE_X0Y64.G3       net (fanout=2)        0.844   in2_2_IBUF
+    SLICE_X0Y64.Y        Tilo                  0.759   c4
+                                                       b_fulladder/outcarry1
+    SLICE_X0Y64.F4       net (fanout=2)        0.042   c3
+    SLICE_X0Y64.X        Tilo                  0.759   c4
+                                                       c_fulladder/outcarry1
+    SLICE_X0Y60.G1       net (fanout=2)        0.383   c4
+    SLICE_X0Y60.Y        Tilo                  0.759   sumwire<4>
+                                                       d_fulladder/Mxor_outadd_xo<0>1
+    H3.O1                net (fanout=1)        0.291   sumwire<4>
+    H3.OTCLK1            Tioock                0.684   out<4>
+                                                       sum_4
+    -------------------------------------------------  ---------------------------
+    Total                                      5.821ns (4.261ns logic, 1.560ns route)
+                                                       (73.2% logic, 26.8% route)
+
+  Minimum Clock Path: clock to sum_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.040   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.036   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.166   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H3.OTCLK1            net (fanout=17)       0.146   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.388ns (2.206ns logic, 0.182ns route)
+                                                       (92.4% logic, 7.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Default OFFSET OUT AFTER analysis for clock "clock_BUFGP" 
+
+ 61 paths analyzed, 17 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Maximum allowable offset is  12.412ns.
+--------------------------------------------------------------------------------
+
+Paths for end point out<16> (M3.PAD), 9 paths
+--------------------------------------------------------------------------------
+Offset:                 12.412ns (clock path + data path + uncertainty)
+  Source:               top_0 (FF)
+  Destination:          out<16> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.429ns (Levels of Logic = 4)
+  Clock Path Delay:     2.983ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L1.ICLK1             net (fanout=17)       0.180   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.983ns (2.757ns logic, 0.226ns route)
+                                                       (92.4% logic, 7.6% route)
+
+  Maximum Data Path: top_0 to out<16>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L1.IQ1               Tiockiq               0.508   in1<8>
+                                                       top_0
+    SLICE_X1Y48.G4       net (fanout=4)        1.579   top<0>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.X        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/outcarry1
+    M3.O1                net (fanout=1)        1.175   out_16_OBUF
+    M3.PAD               Tioop                 3.248   out<16>
+                                                       out_16_OBUF
+                                                       out<16>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.429ns (5.978ns logic, 3.451ns route)
+                                                       (63.4% logic, 36.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 12.393ns (clock path + data path + uncertainty)
+  Source:               top_1 (FF)
+  Destination:          out<16> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.419ns (Levels of Logic = 4)
+  Clock Path Delay:     2.974ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H5.ICLK1             net (fanout=17)       0.171   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.974ns (2.757ns logic, 0.217ns route)
+                                                       (92.7% logic, 7.3% route)
+
+  Maximum Data Path: top_1 to out<16>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H5.IQ1               Tiockiq               0.508   in1<9>
+                                                       top_1
+    SLICE_X1Y48.G3       net (fanout=3)        1.569   top<1>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.X        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/outcarry1
+    M3.O1                net (fanout=1)        1.175   out_16_OBUF
+    M3.PAD               Tioop                 3.248   out<16>
+                                                       out_16_OBUF
+                                                       out<16>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.419ns (5.978ns logic, 3.441ns route)
+                                                       (63.5% logic, 36.5% route)
+
+--------------------------------------------------------------------------------
+Offset:                 12.208ns (clock path + data path + uncertainty)
+  Source:               carry (FF)
+  Destination:          out<16> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.227ns (Levels of Logic = 4)
+  Clock Path Delay:     2.981ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.178   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.981ns (2.757ns logic, 0.224ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: carry to out<16>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y54.XQ       Tcko                  0.592   carry
+                                                       carry
+    SLICE_X1Y48.G1       net (fanout=4)        1.293   carry
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.X        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/outcarry1
+    M3.O1                net (fanout=1)        1.175   out_16_OBUF
+    M3.PAD               Tioop                 3.248   out<16>
+                                                       out_16_OBUF
+                                                       out<16>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.227ns (6.062ns logic, 3.165ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+Offset:                 12.001ns (clock path + data path + uncertainty)
+  Source:               top_2 (FF)
+  Destination:          out<16> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.024ns (Levels of Logic = 4)
+  Clock Path Delay:     2.977ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L3.ICLK1             net (fanout=17)       0.174   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.977ns (2.757ns logic, 0.220ns route)
+                                                       (92.6% logic, 7.4% route)
+
+  Maximum Data Path: top_2 to out<16>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L3.IQ1               Tiockiq               0.508   in1<10>
+                                                       top_2
+    SLICE_X1Y48.G2       net (fanout=2)        1.174   top<2>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.X        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/outcarry1
+    M3.O1                net (fanout=1)        1.175   out_16_OBUF
+    M3.PAD               Tioop                 3.248   out<16>
+                                                       out_16_OBUF
+                                                       out<16>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.024ns (5.978ns logic, 3.046ns route)
+                                                       (66.2% logic, 33.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.031ns (clock path + data path + uncertainty)
+  Source:               top_3 (FF)
+  Destination:          out<16> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.051ns (Levels of Logic = 3)
+  Clock Path Delay:     2.980ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H1.ICLK1             net (fanout=17)       0.177   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.980ns (2.757ns logic, 0.223ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: top_3 to out<16>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H1.IQ1               Tiockiq               0.508   in1<11>
+                                                       top_3
+    SLICE_X0Y41.G2       net (fanout=4)        1.539   top<3>
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.X        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/outcarry1
+    M3.O1                net (fanout=1)        1.175   out_16_OBUF
+    M3.PAD               Tioop                 3.248   out<16>
+                                                       out_16_OBUF
+                                                       out<16>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.051ns (5.274ns logic, 2.777ns route)
+                                                       (65.5% logic, 34.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<14> (L4.PAD), 8 paths
+--------------------------------------------------------------------------------
+Offset:                 12.027ns (clock path + data path + uncertainty)
+  Source:               top_0 (FF)
+  Destination:          out<14> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.044ns (Levels of Logic = 4)
+  Clock Path Delay:     2.983ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L1.ICLK1             net (fanout=17)       0.180   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.983ns (2.757ns logic, 0.226ns route)
+                                                       (92.4% logic, 7.6% route)
+
+  Maximum Data Path: top_0 to out<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L1.IQ1               Tiockiq               0.508   in1<8>
+                                                       top_0
+    SLICE_X1Y48.G4       net (fanout=4)        1.579   top<0>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y41.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y41.X        Tilo                  0.759   out_14_OBUF
+                                                       h_halfadder/Mxor_outadd_Result1
+    L4.O1                net (fanout=1)        0.790   out_14_OBUF
+    L4.PAD               Tioop                 3.248   out<14>
+                                                       out_14_OBUF
+                                                       out<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.044ns (5.978ns logic, 3.066ns route)
+                                                       (66.1% logic, 33.9% route)
+
+--------------------------------------------------------------------------------
+Offset:                 12.008ns (clock path + data path + uncertainty)
+  Source:               top_1 (FF)
+  Destination:          out<14> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      9.034ns (Levels of Logic = 4)
+  Clock Path Delay:     2.974ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H5.ICLK1             net (fanout=17)       0.171   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.974ns (2.757ns logic, 0.217ns route)
+                                                       (92.7% logic, 7.3% route)
+
+  Maximum Data Path: top_1 to out<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H5.IQ1               Tiockiq               0.508   in1<9>
+                                                       top_1
+    SLICE_X1Y48.G3       net (fanout=3)        1.569   top<1>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y41.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y41.X        Tilo                  0.759   out_14_OBUF
+                                                       h_halfadder/Mxor_outadd_Result1
+    L4.O1                net (fanout=1)        0.790   out_14_OBUF
+    L4.PAD               Tioop                 3.248   out<14>
+                                                       out_14_OBUF
+                                                       out<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      9.034ns (5.978ns logic, 3.056ns route)
+                                                       (66.2% logic, 33.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.823ns (clock path + data path + uncertainty)
+  Source:               carry (FF)
+  Destination:          out<14> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.842ns (Levels of Logic = 4)
+  Clock Path Delay:     2.981ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.178   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.981ns (2.757ns logic, 0.224ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: carry to out<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y54.XQ       Tcko                  0.592   carry
+                                                       carry
+    SLICE_X1Y48.G1       net (fanout=4)        1.293   carry
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y41.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y41.X        Tilo                  0.759   out_14_OBUF
+                                                       h_halfadder/Mxor_outadd_Result1
+    L4.O1                net (fanout=1)        0.790   out_14_OBUF
+    L4.PAD               Tioop                 3.248   out<14>
+                                                       out_14_OBUF
+                                                       out<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.842ns (6.062ns logic, 2.780ns route)
+                                                       (68.6% logic, 31.4% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.616ns (clock path + data path + uncertainty)
+  Source:               top_2 (FF)
+  Destination:          out<14> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.639ns (Levels of Logic = 4)
+  Clock Path Delay:     2.977ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L3.ICLK1             net (fanout=17)       0.174   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.977ns (2.757ns logic, 0.220ns route)
+                                                       (92.6% logic, 7.4% route)
+
+  Maximum Data Path: top_2 to out<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L3.IQ1               Tiockiq               0.508   in1<10>
+                                                       top_2
+    SLICE_X1Y48.G2       net (fanout=2)        1.174   top<2>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y41.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y41.X        Tilo                  0.759   out_14_OBUF
+                                                       h_halfadder/Mxor_outadd_Result1
+    L4.O1                net (fanout=1)        0.790   out_14_OBUF
+    L4.PAD               Tioop                 3.248   out<14>
+                                                       out_14_OBUF
+                                                       out<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.639ns (5.978ns logic, 2.661ns route)
+                                                       (69.2% logic, 30.8% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.646ns (clock path + data path + uncertainty)
+  Source:               top_3 (FF)
+  Destination:          out<14> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.666ns (Levels of Logic = 3)
+  Clock Path Delay:     2.980ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H1.ICLK1             net (fanout=17)       0.177   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.980ns (2.757ns logic, 0.223ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: top_3 to out<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H1.IQ1               Tiockiq               0.508   in1<11>
+                                                       top_3
+    SLICE_X0Y41.G2       net (fanout=4)        1.539   top<3>
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y41.F3       net (fanout=3)        0.063   c14
+    SLICE_X0Y41.X        Tilo                  0.759   out_14_OBUF
+                                                       h_halfadder/Mxor_outadd_Result1
+    L4.O1                net (fanout=1)        0.790   out_14_OBUF
+    L4.PAD               Tioop                 3.248   out<14>
+                                                       out_14_OBUF
+                                                       out<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.666ns (5.274ns logic, 2.392ns route)
+                                                       (68.8% logic, 31.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<15> (K5.PAD), 9 paths
+--------------------------------------------------------------------------------
+Offset:                 11.528ns (clock path + data path + uncertainty)
+  Source:               top_0 (FF)
+  Destination:          out<15> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.545ns (Levels of Logic = 4)
+  Clock Path Delay:     2.983ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L1.ICLK1             net (fanout=17)       0.180   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.983ns (2.757ns logic, 0.226ns route)
+                                                       (92.4% logic, 7.6% route)
+
+  Maximum Data Path: top_0 to out<15>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L1.IQ1               Tiockiq               0.508   in1<8>
+                                                       top_0
+    SLICE_X1Y48.G4       net (fanout=4)        1.579   top<0>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.G3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.Y        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/Mxor_outadd_Result1
+    K5.O1                net (fanout=1)        0.291   out_15_OBUF
+    K5.PAD               Tioop                 3.248   out<15>
+                                                       out_15_OBUF
+                                                       out<15>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.545ns (5.978ns logic, 2.567ns route)
+                                                       (70.0% logic, 30.0% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.509ns (clock path + data path + uncertainty)
+  Source:               top_1 (FF)
+  Destination:          out<15> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.535ns (Levels of Logic = 4)
+  Clock Path Delay:     2.974ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H5.ICLK1             net (fanout=17)       0.171   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.974ns (2.757ns logic, 0.217ns route)
+                                                       (92.7% logic, 7.3% route)
+
+  Maximum Data Path: top_1 to out<15>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H5.IQ1               Tiockiq               0.508   in1<9>
+                                                       top_1
+    SLICE_X1Y48.G3       net (fanout=3)        1.569   top<1>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.G3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.Y        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/Mxor_outadd_Result1
+    K5.O1                net (fanout=1)        0.291   out_15_OBUF
+    K5.PAD               Tioop                 3.248   out<15>
+                                                       out_15_OBUF
+                                                       out<15>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.535ns (5.978ns logic, 2.557ns route)
+                                                       (70.0% logic, 30.0% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.324ns (clock path + data path + uncertainty)
+  Source:               carry (FF)
+  Destination:          out<15> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.343ns (Levels of Logic = 4)
+  Clock Path Delay:     2.981ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.178   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.981ns (2.757ns logic, 0.224ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: carry to out<15>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y54.XQ       Tcko                  0.592   carry
+                                                       carry
+    SLICE_X1Y48.G1       net (fanout=4)        1.293   carry
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.G3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.Y        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/Mxor_outadd_Result1
+    K5.O1                net (fanout=1)        0.291   out_15_OBUF
+    K5.PAD               Tioop                 3.248   out<15>
+                                                       out_15_OBUF
+                                                       out<15>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.343ns (6.062ns logic, 2.281ns route)
+                                                       (72.7% logic, 27.3% route)
+
+--------------------------------------------------------------------------------
+Offset:                 11.117ns (clock path + data path + uncertainty)
+  Source:               top_2 (FF)
+  Destination:          out<15> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      8.140ns (Levels of Logic = 4)
+  Clock Path Delay:     2.977ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L3.ICLK1             net (fanout=17)       0.174   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.977ns (2.757ns logic, 0.220ns route)
+                                                       (92.6% logic, 7.4% route)
+
+  Maximum Data Path: top_2 to out<15>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L3.IQ1               Tiockiq               0.508   in1<10>
+                                                       top_2
+    SLICE_X1Y48.G2       net (fanout=2)        1.174   top<2>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y41.G4       net (fanout=4)        0.634   c11
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.G3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.Y        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/Mxor_outadd_Result1
+    K5.O1                net (fanout=1)        0.291   out_15_OBUF
+    K5.PAD               Tioop                 3.248   out<15>
+                                                       out_15_OBUF
+                                                       out<15>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.140ns (5.978ns logic, 2.162ns route)
+                                                       (73.4% logic, 26.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.147ns (clock path + data path + uncertainty)
+  Source:               top_3 (FF)
+  Destination:          out<15> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.167ns (Levels of Logic = 3)
+  Clock Path Delay:     2.980ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H1.ICLK1             net (fanout=17)       0.177   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.980ns (2.757ns logic, 0.223ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: top_3 to out<15>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H1.IQ1               Tiockiq               0.508   in1<11>
+                                                       top_3
+    SLICE_X0Y41.G2       net (fanout=4)        1.539   top<3>
+    SLICE_X0Y41.Y        Tilo                  0.759   out_14_OBUF
+                                                       g_halfadder/outcarry1
+    SLICE_X0Y40.G3       net (fanout=3)        0.063   c14
+    SLICE_X0Y40.Y        Tilo                  0.759   out_16_OBUF
+                                                       i_halfadder/Mxor_outadd_Result1
+    K5.O1                net (fanout=1)        0.291   out_15_OBUF
+    K5.PAD               Tioop                 3.248   out<15>
+                                                       out_15_OBUF
+                                                       out<15>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.167ns (5.274ns logic, 1.893ns route)
+                                                       (73.6% logic, 26.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<12> (L2.PAD), 6 paths
+--------------------------------------------------------------------------------
+Offset:                 10.972ns (clock path + data path + uncertainty)
+  Source:               top_0 (FF)
+  Destination:          out<12> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.989ns (Levels of Logic = 3)
+  Clock Path Delay:     2.983ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L1.ICLK1             net (fanout=17)       0.180   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.983ns (2.757ns logic, 0.226ns route)
+                                                       (92.4% logic, 7.6% route)
+
+  Maximum Data Path: top_0 to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L1.IQ1               Tiockiq               0.508   in1<8>
+                                                       top_0
+    SLICE_X1Y48.G4       net (fanout=4)        1.579   top<0>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y45.G2       net (fanout=4)        0.401   c11
+    SLICE_X0Y45.Y        Tilo                  0.759   out_13_OBUF
+                                                       f_halfadder/Mxor_outadd_Result1
+    L2.O1                net (fanout=1)        0.790   out_12_OBUF
+    L2.PAD               Tioop                 3.248   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.989ns (5.219ns logic, 2.770ns route)
+                                                       (65.3% logic, 34.7% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.953ns (clock path + data path + uncertainty)
+  Source:               top_1 (FF)
+  Destination:          out<12> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.979ns (Levels of Logic = 3)
+  Clock Path Delay:     2.974ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    H5.ICLK1             net (fanout=17)       0.171   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.974ns (2.757ns logic, 0.217ns route)
+                                                       (92.7% logic, 7.3% route)
+
+  Maximum Data Path: top_1 to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H5.IQ1               Tiockiq               0.508   in1<9>
+                                                       top_1
+    SLICE_X1Y48.G3       net (fanout=3)        1.569   top<1>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y45.G2       net (fanout=4)        0.401   c11
+    SLICE_X0Y45.Y        Tilo                  0.759   out_13_OBUF
+                                                       f_halfadder/Mxor_outadd_Result1
+    L2.O1                net (fanout=1)        0.790   out_12_OBUF
+    L2.PAD               Tioop                 3.248   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.979ns (5.219ns logic, 2.760ns route)
+                                                       (65.4% logic, 34.6% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.768ns (clock path + data path + uncertainty)
+  Source:               carry (FF)
+  Destination:          out<12> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.787ns (Levels of Logic = 3)
+  Clock Path Delay:     2.981ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.178   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.981ns (2.757ns logic, 0.224ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: carry to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y54.XQ       Tcko                  0.592   carry
+                                                       carry
+    SLICE_X1Y48.G1       net (fanout=4)        1.293   carry
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y45.G2       net (fanout=4)        0.401   c11
+    SLICE_X0Y45.Y        Tilo                  0.759   out_13_OBUF
+                                                       f_halfadder/Mxor_outadd_Result1
+    L2.O1                net (fanout=1)        0.790   out_12_OBUF
+    L2.PAD               Tioop                 3.248   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.787ns (5.303ns logic, 2.484ns route)
+                                                       (68.1% logic, 31.9% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.561ns (clock path + data path + uncertainty)
+  Source:               top_2 (FF)
+  Destination:          out<12> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.584ns (Levels of Logic = 3)
+  Clock Path Delay:     2.977ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L3.ICLK1             net (fanout=17)       0.174   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.977ns (2.757ns logic, 0.220ns route)
+                                                       (92.6% logic, 7.4% route)
+
+  Maximum Data Path: top_2 to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L3.IQ1               Tiockiq               0.508   in1<10>
+                                                       top_2
+    SLICE_X1Y48.G2       net (fanout=2)        1.174   top<2>
+    SLICE_X1Y48.Y        Tilo                  0.704   out_11_OBUF
+                                                       d_halfadder/outcarry1
+    SLICE_X0Y45.G2       net (fanout=4)        0.401   c11
+    SLICE_X0Y45.Y        Tilo                  0.759   out_13_OBUF
+                                                       f_halfadder/Mxor_outadd_Result1
+    L2.O1                net (fanout=1)        0.790   out_12_OBUF
+    L2.PAD               Tioop                 3.248   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.584ns (5.219ns logic, 2.365ns route)
+                                                       (68.8% logic, 31.2% route)
+
+--------------------------------------------------------------------------------
+Offset:                 10.027ns (clock path + data path + uncertainty)
+  Source:               top_4 (FF)
+  Destination:          out<12> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.053ns (Levels of Logic = 2)
+  Clock Path Delay:     2.974ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    M1.ICLK1             net (fanout=17)       0.171   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.974ns (2.757ns logic, 0.217ns route)
+                                                       (92.7% logic, 7.3% route)
+
+  Maximum Data Path: top_4 to out<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    M1.IQ1               Tiockiq               0.508   in1<12>
+                                                       top_4
+    SLICE_X0Y45.G1       net (fanout=3)        1.748   top<4>
+    SLICE_X0Y45.Y        Tilo                  0.759   out_13_OBUF
+                                                       f_halfadder/Mxor_outadd_Result1
+    L2.O1                net (fanout=1)        0.790   out_12_OBUF
+    L2.PAD               Tioop                 3.248   out<12>
+                                                       out_12_OBUF
+                                                       out<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.053ns (4.515ns logic, 2.538ns route)
+                                                       (64.0% logic, 36.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point out<8> (G4.PAD), 2 paths
+--------------------------------------------------------------------------------
+Offset:                 10.837ns (clock path + data path + uncertainty)
+  Source:               top_0 (FF)
+  Destination:          out<8> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      7.854ns (Levels of Logic = 2)
+  Clock Path Delay:     2.983ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to top_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    L1.ICLK1             net (fanout=17)       0.180   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.983ns (2.757ns logic, 0.226ns route)
+                                                       (92.4% logic, 7.6% route)
+
+  Maximum Data Path: top_0 to out<8>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    L1.IQ1               Tiockiq               0.508   in1<8>
+                                                       top_0
+    SLICE_X0Y57.G4       net (fanout=4)        2.033   top<0>
+    SLICE_X0Y57.Y        Tilo                  0.759   out_9_OBUF
+                                                       b_halfadder/Mxor_outadd_Result1
+    G4.O1                net (fanout=1)        1.306   out_8_OBUF
+    G4.PAD               Tioop                 3.248   out<8>
+                                                       out_8_OBUF
+                                                       out<8>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.854ns (4.515ns logic, 3.339ns route)
+                                                       (57.5% logic, 42.5% route)
+
+--------------------------------------------------------------------------------
+Offset:                 9.427ns (clock path + data path + uncertainty)
+  Source:               carry (FF)
+  Destination:          out<8> (PAD)
+  Source Clock:         clock_BUFGP rising
+  Data Path Delay:      6.446ns (Levels of Logic = 2)
+  Clock Path Delay:     2.981ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clock to carry
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    SLICE_X0Y54.CLK      net (fanout=17)       0.178   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.981ns (2.757ns logic, 0.224ns route)
+                                                       (92.5% logic, 7.5% route)
+
+  Maximum Data Path: carry to out<8>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y54.XQ       Tcko                  0.592   carry
+                                                       carry
+    SLICE_X0Y57.G1       net (fanout=4)        0.541   carry
+    SLICE_X0Y57.Y        Tilo                  0.759   out_9_OBUF
+                                                       b_halfadder/Mxor_outadd_Result1
+    G4.O1                net (fanout=1)        1.306   out_8_OBUF
+    G4.PAD               Tioop                 3.248   out<8>
+                                                       out_8_OBUF
+                                                       out<8>
+    -------------------------------------------------  ---------------------------
+    Total                                      6.446ns (4.599ns logic, 1.847ns route)
+                                                       (71.3% logic, 28.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Default path analysis 
+
+ 17 paths analyzed, 17 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.004ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sum_0 (D1.OTCLK1), 1 path
+--------------------------------------------------------------------------------
+Delay:                  3.004ns (data path)
+  Source:               clock (PAD)
+  Destination:          sum_0 (FF)
+  Data Path Delay:      3.004ns (Levels of Logic = 2)
+
+  Maximum Data Path: clock to sum_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    D1.OTCLK1            net (fanout=17)       0.201   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      3.004ns (2.757ns logic, 0.247ns route)
+                                                       (91.8% logic, 8.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_3 (D2.OTCLK1), 1 path
+--------------------------------------------------------------------------------
+Delay:                  3.004ns (data path)
+  Source:               clock (PAD)
+  Destination:          sum_3 (FF)
+  Data Path Delay:      3.004ns (Levels of Logic = 2)
+
+  Maximum Data Path: clock to sum_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    D2.OTCLK1            net (fanout=17)       0.201   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      3.004ns (2.757ns logic, 0.247ns route)
+                                                       (91.8% logic, 8.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_2 (E2.OTCLK1), 1 path
+--------------------------------------------------------------------------------
+Delay:                  2.999ns (data path)
+  Source:               clock (PAD)
+  Destination:          sum_2 (FF)
+  Data Path Delay:      2.999ns (Levels of Logic = 2)
+
+  Maximum Data Path: clock to sum_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E2.OTCLK1            net (fanout=17)       0.196   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.999ns (2.757ns logic, 0.242ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_5 (E1.OTCLK1), 1 path
+--------------------------------------------------------------------------------
+Delay:                  2.999ns (data path)
+  Source:               clock (PAD)
+  Destination:          sum_5 (FF)
+  Data Path Delay:      2.999ns (Levels of Logic = 2)
+
+  Maximum Data Path: clock to sum_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    E1.OTCLK1            net (fanout=17)       0.196   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.999ns (2.757ns logic, 0.242ns route)
+                                                       (91.9% logic, 8.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sum_1 (F4.OTCLK1), 1 path
+--------------------------------------------------------------------------------
+Delay:                  2.995ns (data path)
+  Source:               clock (PAD)
+  Destination:          sum_1 (FF)
+  Data Path Delay:      2.995ns (Levels of Logic = 2)
+
+  Maximum Data Path: clock to sum_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    B9.I                 Tiopi                 1.300   clock
+                                                       clock
+                                                       clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.I0     net (fanout=1)        0.046   clock_BUFGP/IBUFG
+    BUFGMUX_X2Y10.O      Tgi0o                 1.457   clock_BUFGP/BUFG
+                                                       clock_BUFGP/BUFG.GCLKMUX
+                                                       clock_BUFGP/BUFG
+    F4.OTCLK1            net (fanout=17)       0.192   clock_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.995ns (2.757ns logic, 0.238ns route)
+                                                       (92.1% logic, 7.9% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+in1<0>      |    8.889(R)|   -0.213(R)|clock_BUFGP       |   0.000|
+in1<1>      |    8.095(R)|    0.228(R)|clock_BUFGP       |   0.000|
+in1<2>      |    6.897(R)|   -0.332(R)|clock_BUFGP       |   0.000|
+in1<3>      |    6.423(R)|   -0.717(R)|clock_BUFGP       |   0.000|
+in1<4>      |    5.265(R)|    0.153(R)|clock_BUFGP       |   0.000|
+in1<5>      |    5.395(R)|   -1.483(R)|clock_BUFGP       |   0.000|
+in1<6>      |    2.656(R)|    0.484(R)|clock_BUFGP       |   0.000|
+in1<7>      |    2.041(R)|    0.333(R)|clock_BUFGP       |   0.000|
+in1<8>      |    4.669(R)|   -0.795(R)|clock_BUFGP       |   0.000|
+in1<9>      |    4.676(R)|   -0.804(R)|clock_BUFGP       |   0.000|
+in1<10>     |    4.674(R)|   -0.801(R)|clock_BUFGP       |   0.000|
+in1<11>     |    4.671(R)|   -0.798(R)|clock_BUFGP       |   0.000|
+in1<12>     |    4.676(R)|   -0.804(R)|clock_BUFGP       |   0.000|
+in1<13>     |    4.678(R)|   -0.805(R)|clock_BUFGP       |   0.000|
+in1<14>     |    4.678(R)|   -0.805(R)|clock_BUFGP       |   0.000|
+in1<15>     |    4.675(R)|   -0.802(R)|clock_BUFGP       |   0.000|
+in2<0>      |    8.728(R)|   -0.125(R)|clock_BUFGP       |   0.000|
+in2<1>      |    8.245(R)|    0.239(R)|clock_BUFGP       |   0.000|
+in2<2>      |    7.077(R)|   -0.516(R)|clock_BUFGP       |   0.000|
+in2<3>      |    5.858(R)|   -0.443(R)|clock_BUFGP       |   0.000|
+in2<4>      |    5.259(R)|    0.201(R)|clock_BUFGP       |   0.000|
+in2<5>      |    4.019(R)|   -0.516(R)|clock_BUFGP       |   0.000|
+in2<6>      |    2.802(R)|    0.367(R)|clock_BUFGP       |   0.000|
+in2<7>      |    1.702(R)|    0.921(R)|clock_BUFGP       |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+out<0>      |    6.180(R)|clock_BUFGP       |   0.000|
+out<1>      |    6.171(R)|clock_BUFGP       |   0.000|
+out<2>      |    6.175(R)|clock_BUFGP       |   0.000|
+out<3>      |    6.180(R)|clock_BUFGP       |   0.000|
+out<4>      |    6.150(R)|clock_BUFGP       |   0.000|
+out<5>      |    6.175(R)|clock_BUFGP       |   0.000|
+out<6>      |    6.150(R)|clock_BUFGP       |   0.000|
+out<7>      |    6.165(R)|clock_BUFGP       |   0.000|
+out<8>      |   10.837(R)|clock_BUFGP       |   0.000|
+out<9>      |    9.757(R)|clock_BUFGP       |   0.000|
+out<10>     |   10.443(R)|clock_BUFGP       |   0.000|
+out<11>     |   10.055(R)|clock_BUFGP       |   0.000|
+out<12>     |   10.972(R)|clock_BUFGP       |   0.000|
+out<13>     |   10.433(R)|clock_BUFGP       |   0.000|
+out<14>     |   12.027(R)|clock_BUFGP       |   0.000|
+out<15>     |   11.528(R)|clock_BUFGP       |   0.000|
+out<16>     |   12.412(R)|clock_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 174 paths, 0 nets, and 115 connections
+
+Design statistics:
+   Maximum combinational path delay:   3.004ns
+   Minimum input required time before clock:   8.889ns
+   Maximum output delay after clock:  12.412ns
+
+
+Analysis completed Fri Nov 30 07:31:32 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 268 MB
+
+
+

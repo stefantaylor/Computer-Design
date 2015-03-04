@@ -1,0 +1,42 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Tue Oct 30 16:13:47 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LCD<0>" LOCATE = SITE "B4" LEVEL 1;
+COMP "LCD<1>" LOCATE = SITE "A4" LEVEL 1;
+COMP "LCD<2>" LOCATE = SITE "D5" LEVEL 1;
+COMP "switches<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "LCD<3>" LOCATE = SITE "C5" LEVEL 1;
+COMP "switches<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "LCD<4>" LOCATE = SITE "A6" LEVEL 1;
+COMP "switches<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "LCD<5>" LOCATE = SITE "B6" LEVEL 1;
+COMP "switches<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "LCD<6>" LOCATE = SITE "E7" LEVEL 1;
+COMP "LCD<7>" LOCATE = SITE "F7" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "LED<7>" LOCATE = SITE "F9" LEVEL 1;
+COMP "reset" LOCATE = SITE "D18" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP CLK = BEL "u_fsm1/out" BEL "u_fsm1/count_0" BEL "u_fsm1/count_1" BEL
+        "u_fsm1/count_2" BEL "u_fsm1/count_3" BEL "u_fsm1/count_4" BEL
+        "u_fsm1/count_5" BEL "u_fsm1/count_6" BEL "u_fsm1/count_7" BEL
+        "u_fsm1/count_8" BEL "u_fsm1/count_9" BEL "u_fsm1/count_10" BEL
+        "u_fsm1/count_11" BEL "u_fsm1/count_12" BEL "u_fsm1/count_13" BEL
+        "u_fsm1/count_14" BEL "u_fsm1/count_15" BEL "u_fsm1/count_16" BEL
+        "u_fsm1/count_17" BEL "u_fsm1/count_18" BEL "u_fsm1/count_19" BEL
+        "u_fsm1/count_20" BEL "u_fsm1/count_21" BEL "u_fsm1/count_22" BEL
+        "u_fsm1/count_23" BEL "u_fsm1/count_24" BEL "u_fsm2/out4" BEL
+        "u_fsm2/out3" BEL "u_fsm2/out2" BEL "u_fsm2/out1" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "CLK" 20 ns HIGH 40%;
+SCHEMATIC END;
+

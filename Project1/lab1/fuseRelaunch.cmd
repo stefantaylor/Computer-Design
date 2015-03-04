@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/two_input_xor_tb_isim_beh.exe" -prj "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/two_input_xor_tb_beh.prj" "work.two_input_xor_tb" "work.glbl" 

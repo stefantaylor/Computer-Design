@@ -1,0 +1,72 @@
+Release 13.2 - reportgen O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Fri Nov 30 07:31:30 2012
+
+SUMMARY
+-------
+There are 4 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   clock_BUFGP driven by BUFGMUX_X2Y10 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of        DIFFM:     6 used out of    29    20%
+Number of        DIFFS:     6 used out of    29    20%
+Number of         IBUF:     2 used out of    11    18%
+Number of       SLICEM:     3 used out of   582     1%
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 1
+List of global clocks in this region:
+   clock_BUFGP driven by BUFGMUX_X2Y10 
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of        DIFFM:    10 used out of    29    34%
+Number of        DIFFS:    11 used out of    29    37%
+Number of       DIFFSI:     1 used out of    11     9%
+Number of         IBUF:     6 used out of    11    54%
+Number of          IOB:     1 used out of    29     3%
+Number of       SLICEL:     5 used out of   582     1%
+Number of       SLICEM:     8 used out of   582     1%
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of      BUFGMUX:     1 used out of     6    16%
+

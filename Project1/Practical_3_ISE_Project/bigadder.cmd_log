@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_3_ISE_Project/bigadder.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_3_ISE_Project/bigadder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -a -i -p xc3s500e-fg320-4 bigadder.ngc bigadder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr b -c 100 -o bigadder_map.ncd bigadder.ngd bigadder.pcf 
+par -w -intstyle ise -ol high -t 1 bigadder_map.ncd bigadder.ncd bigadder.pcf 
+trce -intstyle ise -v 5 -tsi bigadder.tsi -a -s 4 -u 20 -n 5 -xml bigadder.twx bigadder.ncd -o bigadder.twr bigadder.pcf 
+xpwr -intstyle ise bigadder.ncd bigadder.pcf -o bigadder.pwr 
+bitgen -intstyle ise -f bigadder.ut bigadder.ncd 
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_3_ISE_Project/bigadder.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_3_ISE_Project/bigadder.syr" 

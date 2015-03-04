@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+threebitadder instance_name (
+    .A(A), 
+    .B(B), 
+    .R(R)
+    );
+
+

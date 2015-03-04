@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/attempt2/topModule.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/attempt2/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topModule.ucf -p xc3s500e-fg320-4 topModule.ngc topModule.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topModule.ucf -p xc3s500e-fg320-4 topModule.ngc topModule.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf topModule.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 

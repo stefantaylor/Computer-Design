@@ -1,0 +1,24 @@
+# PlanAhead Generated physical constraints 
+
+NET "A" LOC = L13;
+NET "B" LOC = L14;
+NET "C" LOC = H18;
+NET "clock" LOC = V4;
+NET "reset" LOC = K17;
+NET "outadd" LOC = F12;
+NET "outcarry" LOC = E12;
+
+# PlanAhead Generated IO constraints 
+
+NET "A" IOSTANDARD = LVTTL;
+NET "B" IOSTANDARD = LVTTL;
+NET "C" IOSTANDARD = LVTTL;
+NET "outadd" IOSTANDARD = LVTTL;
+NET "outcarry" IOSTANDARD = LVTTL;
+NET "outadd" DRIVE = 8;
+NET "outcarry" DRIVE = 8;
+NET "A" PULLUP;
+NET "B" PULLUP;
+NET "C" PULLUP;
+NET "clock" IOSTANDARD = LVTTL | PULLDOWN ;
+NET "reset" IOSTANDARD = LVTTL | PULLDOWN ;

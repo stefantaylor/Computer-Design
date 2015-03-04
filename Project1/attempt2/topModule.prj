@@ -1,0 +1,3 @@
+verilog work "three_input_adder.v"
+verilog work "Dtype.v"
+verilog work "topModule.v"

@@ -1,0 +1,3 @@
+verilog work "halfadder.v"
+verilog work "add.v"
+verilog work "bigadder.v"

@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Tue Oct 09 14:00:23 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "A" LOCATE = SITE "L13" LEVEL 1;
+COMP "B" LOCATE = SITE "L14" LEVEL 1;
+COMP "C" LOCATE = SITE "H18" LEVEL 1;
+COMP "outadd" LOCATE = SITE "F12" LEVEL 1;
+COMP "outcarry" LOCATE = SITE "E12" LEVEL 1;
+SCHEMATIC END;
+

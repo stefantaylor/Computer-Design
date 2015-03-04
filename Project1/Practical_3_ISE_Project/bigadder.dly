@@ -1,0 +1,328 @@
+Release 13.2 - reportgen O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Fri Nov 30 07:31:28 2012
+
+File: bigadder.dly
+
+ The 20 worst nets by delay are:
++-----------------+-----------+
+| Max Delay       | Netname   |
++-----------------+-----------+
+   2.033            top<0>
+   1.755            top<3>
+   1.753            in1_5_IBUF
+   1.748            top<4>
+   1.728            reset_IBUF
+   1.654            top<7>
+   1.624            top<1>
+   1.515            sumwire<5>
+   1.310            in1_7_IBUF
+   1.306            out_8_OBUF
+   1.293            carry
+   1.268            out_10_OBUF
+   1.243            in2_2_IBUF
+   1.217            top<6>
+   1.201            in1_0_IBUF
+   1.175            out_16_OBUF
+   1.174            top<2>
+   1.174            sumwire<3>
+   1.156            top<5>
+   1.138            in2_0_IBUF
+---------------------------------
+
+-------------------------------------------------------------------------------
+                               Net Delays
+-------------------------------------------------------------------------------
+
+c11
+   out_11_OBUF.Y
+         0.361  out_13_OBUF.F3
+         0.401  out_13_OBUF.G3
+         0.038  out_11_OBUF.F1
+         0.634  out_14_OBUF.G4
+
+c14
+   out_14_OBUF.Y
+         0.063  out_16_OBUF.F1
+         0.063  out_16_OBUF.G3
+         0.063  out_14_OBUF.F1
+
+c2
+   sumwire<2>.Y
+         0.751  c4.G3
+         0.024  sumwire<2>.F1
+
+c3
+   c4.Y
+         0.107  sumwire<3>.G1
+         0.042  c4.F3
+
+c4
+   c4.X
+         0.383  sumwire<4>.G1
+         0.285  c6.G3
+
+c5
+   c6.Y
+         0.143  sumwire<5>.G1
+         0.042  c6.F3
+
+c6
+   c6.X
+         0.597  carry.G3
+         0.706  sumwire<6>.G1
+
+c7
+   carry.Y
+         0.504  sumwire<7>.G1
+         0.048  carry.F3
+
+carry
+   carry.XQ
+         0.536  out_9_OBUF.F3
+         0.541  out_9_OBUF.G1
+         1.293  out_11_OBUF.G4
+         1.184  out_10_OBUF.G3
+
+clock_BUFGP
+   clock_BUFGP/BUFG.O
+         0.174  in1<10>.ICLK1
+         0.177  in1<11>.ICLK1
+         0.171  in1<12>.ICLK1
+         0.170  in1<13>.ICLK1
+         0.170  in1<14>.ICLK1
+         0.173  in1<15>.ICLK1
+         0.180  in1<8>.ICLK1
+         0.171  in1<9>.ICLK1
+         0.201  out<0>.OTCLK1
+         0.192  out<1>.OTCLK1
+         0.196  out<2>.OTCLK1
+         0.201  out<3>.OTCLK1
+         0.171  out<4>.OTCLK1
+         0.196  out<5>.OTCLK1
+         0.171  out<6>.OTCLK1
+         0.186  out<7>.OTCLK1
+         0.178  carry.CLK
+
+clock_BUFGP/IBUFG
+   clock.I
+         0.046  clock_BUFGP/BUFG.I0
+
+in1_0_IBUF
+   in1<0>.I
+         0.687  sumwire<0>.F2
+         1.147  sumwire<0>.G1
+         1.201  sumwire<2>.G2
+
+in1_1_IBUF
+   in1<1>.I
+         0.462  sumwire<0>.G4
+         0.407  sumwire<2>.G1
+
+in1_2_IBUF
+   in1<2>.I
+         0.664  c4.G1
+         1.012  sumwire<2>.F2
+
+in1_3_IBUF
+   in1<3>.I
+         1.064  sumwire<3>.G2
+         0.991  c4.F1
+
+in1_4_IBUF
+   in1<4>.I
+         0.823  sumwire<4>.G2
+         0.877  c6.G1
+
+in1_5_IBUF
+   in1<5>.I
+         1.675  sumwire<5>.G2
+         1.753  c6.F1
+
+in1_6_IBUF
+   in1<6>.I
+         0.315  carry.G1
+         0.369  sumwire<6>.G2
+
+in1_7_IBUF
+   in1<7>.I
+         0.963  sumwire<7>.G2
+         1.310  carry.F1
+
+in2_0_IBUF
+   in2<0>.I
+         0.577  sumwire<0>.F1
+         1.138  sumwire<0>.G2
+         1.040  sumwire<2>.G3
+
+in2_1_IBUF
+   in2<1>.I
+         0.448  sumwire<0>.G3
+         0.557  sumwire<2>.G4
+
+in2_2_IBUF
+   in2<2>.I
+         0.844  c4.G2
+         1.243  sumwire<2>.F3
+
+in2_3_IBUF
+   in2<3>.I
+         0.756  sumwire<3>.G3
+         0.426  c4.F2
+
+in2_4_IBUF
+   in2<4>.I
+         0.762  sumwire<4>.G3
+         0.871  c6.G2
+
+in2_5_IBUF
+   in2<5>.I
+         0.466  sumwire<5>.G3
+         0.377  c6.F2
+
+in2_6_IBUF
+   in2<6>.I
+         0.461  carry.G2
+         0.406  sumwire<6>.G3
+
+in2_7_IBUF
+   in2<7>.I
+         0.624  sumwire<7>.G3
+         0.575  carry.F2
+
+out_10_OBUF
+   out_10_OBUF.Y
+         1.268  out<10>.O1
+
+out_11_OBUF
+   out_11_OBUF.X
+         0.291  out<11>.O1
+
+out_12_OBUF
+   out_13_OBUF.Y
+         0.790  out<12>.O1
+
+out_13_OBUF
+   out_13_OBUF.X
+         0.291  out<13>.O1
+
+out_14_OBUF
+   out_14_OBUF.X
+         0.790  out<14>.O1
+
+out_15_OBUF
+   out_16_OBUF.Y
+         0.291  out<15>.O1
+
+out_16_OBUF
+   out_16_OBUF.X
+         1.175  out<16>.O1
+
+out_8_OBUF
+   out_9_OBUF.Y
+         1.306  out<8>.O1
+
+out_9_OBUF
+   out_9_OBUF.X
+         0.291  out<9>.O1
+
+reset_IBUF
+   reset.I
+         1.205  in1<10>.SR
+         0.609  in1<11>.SR
+         1.728  in1<12>.SR
+         1.445  in1<13>.SR
+         1.010  in1<14>.SR
+         1.012  in1<15>.SR
+         0.654  in1<8>.SR
+         0.957  in1<9>.SR
+         1.678  out<0>.SR
+         1.329  out<1>.SR
+         1.608  out<2>.SR
+         1.678  out<3>.SR
+         0.954  out<4>.SR
+         1.676  out<5>.SR
+         0.957  out<6>.SR
+         0.616  out<7>.SR
+         0.622  carry.SR
+
+sumwire<0>
+   sumwire<0>.X
+         0.922  out<0>.O1
+
+sumwire<1>
+   sumwire<0>.Y
+         0.586  out<1>.O1
+
+sumwire<2>
+   sumwire<2>.X
+         0.794  out<2>.O1
+
+sumwire<3>
+   sumwire<3>.Y
+         1.174  out<3>.O1
+
+sumwire<4>
+   sumwire<4>.Y
+         0.291  out<4>.O1
+
+sumwire<5>
+   sumwire<5>.Y
+         1.515  out<5>.O1
+
+sumwire<6>
+   sumwire<6>.Y
+         1.106  out<6>.O1
+
+sumwire<7>
+   sumwire<7>.Y
+         0.790  out<7>.O1
+
+top<0>
+   in1<8>.IQ1
+         1.968  out_9_OBUF.F2
+         2.033  out_9_OBUF.G2
+         1.579  out_11_OBUF.G3
+         1.677  out_10_OBUF.G1
+
+top<1>
+   in1<9>.IQ1
+         1.020  out_9_OBUF.F1
+         1.569  out_11_OBUF.G2
+         1.624  out_10_OBUF.G4
+
+top<2>
+   in1<10>.IQ1
+         1.174  out_11_OBUF.G1
+         1.120  out_10_OBUF.G2
+
+top<3>
+   in1<11>.IQ1
+         1.755  out_13_OBUF.F1
+         1.459  out_13_OBUF.G2
+         1.157  out_11_OBUF.F2
+         1.539  out_14_OBUF.G3
+
+top<4>
+   in1<12>.IQ1
+         1.743  out_13_OBUF.F4
+         1.748  out_13_OBUF.G1
+         1.516  out_14_OBUF.G2
+
+top<5>
+   in1<13>.IQ1
+         1.156  out_13_OBUF.F2
+         1.155  out_14_OBUF.G1
+
+top<6>
+   in1<14>.IQ1
+         1.177  out_16_OBUF.F2
+         1.217  out_16_OBUF.G2
+         1.177  out_14_OBUF.F2
+
+top<7>
+   in1<15>.IQ1
+         1.589  out_16_OBUF.F3
+         1.654  out_16_OBUF.G1
+

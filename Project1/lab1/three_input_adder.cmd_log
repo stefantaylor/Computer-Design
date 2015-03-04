@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/three_input_adder.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/three_input_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc two_input_xor.ucf -p xc3s500e-fg320-4 three_input_adder.ngc three_input_adder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc two_input_xor.ucf -p xc3s500e-fg320-4 three_input_adder.ngc three_input_adder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o three_input_adder_map.ncd three_input_adder.ngd three_input_adder.pcf 
+par -w -intstyle ise -ol high -t 1 three_input_adder_map.ncd three_input_adder.ncd three_input_adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml three_input_adder.twx three_input_adder.ncd -o three_input_adder.twr three_input_adder.pcf -ucf two_input_xor.ucf 
+bitgen -intstyle ise -f three_input_adder.ut three_input_adder.ncd 
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/three_input_adder.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/lab1/three_input_adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc two_input_xor.ucf -p xc3s500e-fg320-4 three_input_adder.ngc three_input_adder.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o three_input_adder_map.ncd three_input_adder.ngd three_input_adder.pcf 
+par -w -intstyle ise -ol high -t 1 three_input_adder_map.ncd three_input_adder.ncd three_input_adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml three_input_adder.twx three_input_adder.ncd -o three_input_adder.twr three_input_adder.pcf -ucf two_input_xor.ucf 

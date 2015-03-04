@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/BTN_memory.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/LCD_driver.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/add.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/fsm1.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/fsm2.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/threebitadder.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/threebitmultiplier.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/top.v\&quot; into library work</arg>
+</msg>
+
+</messages>
+

@@ -1,0 +1,5 @@
+verilog work "LCD_driver.v"
+verilog work "fsm2.v"
+verilog work "fsm1.v"
+verilog work "BTN_memory.v"
+verilog work "top.v"

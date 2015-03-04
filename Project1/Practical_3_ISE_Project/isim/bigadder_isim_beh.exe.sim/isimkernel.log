@@ -1,0 +1,30 @@
+Command line:
+   bigadder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58453
+
+Wed Nov 28 15:01:45 2012
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 201.941 Meg
+
+ Total Signals          : 104
+ Total Nets             : 87
+ Total Signal Drivers   : 47
+ Total Blocks           : 18
+ Total Primitive Blocks : 17
+ Total Processes        : 49
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 184
+Total Line Count : 58
+Total Line Count : 58
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 279.54 Meg
+
+Wed Nov 28 15:03:27 2012
+

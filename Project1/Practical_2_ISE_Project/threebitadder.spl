@@ -1,0 +1,9 @@
+[Inputs]
+=A[2:0]=
+=B[2:0]=
+[Outputs]
+=R[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel threebitadder
+

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/threebitmultiplier.xst" -ofn "/afs/inf.ed.ac.uk/user/s10/s1006260/ComputerDesign/Project1/Practical_2_ISE_Project/threebitmultiplier.syr" 
